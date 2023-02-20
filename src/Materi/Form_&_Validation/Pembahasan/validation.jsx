@@ -1,5 +1,5 @@
 import React from "react";
-import * as Validator from 'validatorjs';
+import Validator from 'validatorjs';
 const Input = ({label, type, name, onChange}) => {
     return(
         <div>
@@ -28,6 +28,7 @@ class Validation extends React.Component{
     }
     handleSubmit = event => {
         event.preventDefault();
+        console.log(this.state);
         const {email, password} = this.state;
         
         let data = { email, password };
